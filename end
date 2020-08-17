@@ -1,0 +1,41 @@
+[1mdiff --git a/a.txt b/a.txt[m
+[1mindex 501108e..2bbcd8b 100644[m
+[1m--- a/a.txt[m
+[1m+++ b/a.txt[m
+[36m@@ -1,2 +1,2 @@[m
+ 第一次修改[m
+[31m-分支[m
+\ No newline at end of file[m
+[32m+[m[32m分支[m
+[1mdiff --git a/originnew b/originnew[m
+[1m--- a/originnew[m
+[1m+++ b/originnew[m
+[36m@@ -1 +1 @@[m
+[31m-Subproject commit 49830a6efe941709008e3cabf20c6ffbbeae852a[m
+[32m+[m[32mSubproject commit 49830a6efe941709008e3cabf20c6ffbbeae852a-dirty[m
+[1mdiff --git a/word.docx b/word.docx[m
+[1mindex 72c58bb..d1dd0d8 100644[m
+[1m--- a/word.docx[m
+[1m+++ b/word.docx[m
+[36m@@ -37,3 +37,21 @@[m [m$ git config --global user.email "email@example.com"[m
+ 		1）在git建一个仓库originnew[m
+ 		2）cd xxx 进到要放克隆项目的地方[m
+ 		3）git clone git@qithub.com:lishidong0401/originnew.git克隆[m
+[32m+[m
+[32m+[m[32m三．分支[m
+[32m+[m	[32m1．创建合并分支[m
+[32m+[m		[32m1）git checkout -b newdev(创建并切换到新分支newdev)[m
+[32m+[m		[32m   其实执行了两步：git branch newdev,git checkout newdev[m
+[32m+[m		[32m2）git checkout master(切换到master分支)[m
+[32m+[m		[32m3）git merge newdev(把newdev分支合并到当前分支)[m
+[32m+[m		[32m4）git branch -d newdev(删除分支newdev)[m
+[32m+[m[32m    Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在master分支上工作效果是一样的，但过程更安全[m
+[32m+[m[32m    新版本 git switch -c newdev[m
+[32m+[m[41m    [m	[32m   git switch master[m
+[32m+[m[32m总结：Git鼓励大量使用分支：[m
+[32m+[m[32m  查看分支：git branch[m
+[32m+[m[32m  创建分支：git branch <name>[m
+[32m+[m[32m  切换分支：git checkout <name>或者git switch <name>[m
+[32m+[m[32m  创建+切换分支：git checkout -b <name>或者git switch -c <name>[m
+[32m+[m[32m  合并某分支到当前分支：git merge <name>[m
+[32m+[m[32m  删除分支：git branch -d <name>[m
